@@ -16,7 +16,7 @@ namespace TicTacToe
             get { return checker; }
             set { checker = value; }
         }
-
+        
         public char[,] MyProperty
         {
             get { return grid; }
@@ -41,8 +41,11 @@ namespace TicTacToe
 
                 ReplaceNumberWithLetter(input1, playerNum);
                 //checker.Validate(MyProperty); // Call the Validate method after each move
+               
 
                 playerNum = (playerNum % 2) + 1;
+
+                
             }
             DisplayGrid();
         }
@@ -86,8 +89,10 @@ namespace TicTacToe
 
                 }
             }
+           
 
         }
+       
     }
 }
 

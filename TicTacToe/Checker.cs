@@ -191,6 +191,21 @@ namespace TicTacToe
                 }
 
             }
+            int counter = 0;
+            for (int i = 0; i < board.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < board.GetLength(1); j++)
+                {
+                    if (board[i, j] == 'O' || board[i, j] == 'X')
+                    {
+                        counter++;
+                       
+                    }
+
+
+                }
+            }
             if (verticalCount0O == 3 || verticalCount1O == 3 ||
                 verticalCount2O == 3 || verticalCount0X == 3 ||
                 verticalCount1X == 3 || verticalCount2X == 3 ||
@@ -201,6 +216,11 @@ namespace TicTacToe
                 topLeftO == 3 || topRightO == 3)
             {
                 //Console.WriteLine("TRUE");
+                return true;
+            }
+            else if (counter == 9)
+            {
+                Console.WriteLine("\nITS A TIE!!!");
                 return true;
             }
             else
